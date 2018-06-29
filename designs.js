@@ -23,4 +23,8 @@ function makeGrid(){
     }
 }
 
+$('table').click(function(event){
+    let color = $('#colorPicker').val();
+    $(event.target).css('background-color', color);
+});
 
