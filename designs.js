@@ -1,6 +1,6 @@
 // Select color input
 // Select size input
-
+$(document).ready(function() {
 $('#sizepicker').submit(function (event){
     // To prevent the page from reloading
     event.preventDefault();
@@ -17,14 +17,14 @@ function makeGrid(){
     for (let i = 0; i < rows; i++){
         $('#pixelCanvas').append('<tr></tr>');
     }
-    //To modify the columns based on the
+    //To modify the columns based on the entries
     for (let j = 0; j < columns; j++){
         $('tr').append('<td></td>');
     }
 }
-
+//To Add color to the table cells
 $('table').click(function(event){
     let color = $('#colorPicker').val();
     $(event.target).css('background-color', color);
 });
-
+});
