@@ -1,5 +1,4 @@
-// Select color input
-// Select size input
+
 $(document).ready(function() {
 $('#sizepicker').submit(function (event){
     // To prevent the page from reloading
@@ -9,15 +8,16 @@ $('#sizepicker').submit(function (event){
     //To run the function when clicked
     makeGrid()
 });
-
+/* This function takes values inputed the by user and
+assigns the variable names rows and columns each representing the
+side respectively. The function later creates tables based on the rows and columns
+inserted by the user  */
 function makeGrid(){
-    const rows = $('#inputHeight').val();
-    const columns = $('#inputWeight').val();
-    //To create rows based on the entries
+    let rows = $('#inputHeight').val();
+    let columns = $('#inputWeight').val();
     for (let i = 0; i < rows; i++){
         $('#pixelCanvas').append('<tr></tr>');
     }
-    //To modify the columns based on the entries
     for (let j = 0; j < columns; j++){
         $('tr').append('<td></td>');
     }
@@ -28,3 +28,4 @@ $('table').click(function(event){
     $(event.target).css('background-color', color);
 });
 });
+
